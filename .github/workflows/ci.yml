@@ -51,8 +51,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          push: true
-          tags: sadullahgultekin/github-actions-test:latest
+      - name: Push to Docker Hub
+        run: docker push sadullahgultekin/github-actions-test:tagname
+

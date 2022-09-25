@@ -29,8 +29,8 @@ jobs:
         run: |
           docker build -t ci-image .
           docker tag ci-image sadullahgultekin/github-actions-test:latest
-          docker run -it -dp 5000:5000 ci-image
-          docker wait ci-image
+          docker run -it -dp 5000:5000 sadullahgultekin/github-actions-test:latest
+          docker wait sadullahgultekin/github-actions-test:latest
           
       - name: Run tests
         run: curl -v http://127.0.0.1:5000

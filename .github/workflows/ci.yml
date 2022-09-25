@@ -40,4 +40,5 @@ jobs:
           docker run -it -dp 5000:5000 ci-image
       - name: Run tests
         run: |
-          curl http://127.0.0.1:5000
+          sleep 5
+          curl -v http://127.0.0.1:5000

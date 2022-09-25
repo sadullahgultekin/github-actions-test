@@ -41,4 +41,6 @@ jobs:
       - name: Run tests
         run: |
           sleep 5
-          curl -v http://127.0.0.1:5000
+          curl -v https://127.0.0.1:5000
+      - name: Echo step test
+        run: echo Still running
